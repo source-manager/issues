@@ -1,0 +1,78 @@
+name: Bug
+description: Something does not work, or loses or changes something it should not.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **About > Copy details** puts the build details on your clipboard — paste them below.
+        If the app lost or changed work, say so first and **do not run further commands in that repository** until you have read the answer here.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Press ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: state
+    attributes:
+      label: What the repository was in the middle of
+      description: A rebase, merge, cherry-pick, bisect or stash apply in progress? Detached HEAD, a linked worktree, a submodule, sparse checkout, LFS, a very large history?
+  - type: textarea
+    id: build
+    attributes:
+      label: Build details
+      description: Paste the output of About > Copy details (release, build, Qt, libgit2, platform).
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Linux
+        - Windows
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: forge
+    attributes:
+      label: Forge involved
+      description: Only if the problem is about pull requests, CI or tickets.
+      options:
+        - Not applicable
+        - GitHub
+        - GitLab
+        - Bitbucket
+        - Self-hosted
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log or screenshots
+      description: |
+        About > Reveal log opens the log folder. **The log records paths** — read it and remove anything private before attaching.
+        Tokens are redacted automatically; please check anyway.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
+        - label: I have removed tokens, passwords and private paths from anything attached.
+          required: true

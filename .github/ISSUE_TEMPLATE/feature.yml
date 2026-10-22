@@ -1,0 +1,44 @@
+name: Feature
+description: Something the app cannot do at all today.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and what do you do today instead?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like
+      description: How it would work from where you sit. A sketch of the interaction is plenty.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other tools or workarounds, and why they fall short.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Fleet
+        - Changes and diffs
+        - History
+        - Branches and stacks
+        - Rebase, cherry-pick, merge, conflicts
+        - Stash, worktrees, submodules
+        - Pull requests and CI
+        - Tickets
+        - AI
+        - Settings
+        - Packaging and install
+        - Other
+  - type: markdown
+    attributes:
+      value: Non-git version control, agentic AI and in-repository code review are [non-goals](https://source-manager.github.io/docs/roadmap/non-goals/).

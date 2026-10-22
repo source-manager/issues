@@ -1,0 +1,23 @@
+name: Question
+description: You are not sure how something works or whether it is possible.
+title: "[Question] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: Please check the [documentation](https://source-manager.github.io/docs/) and existing issues first.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you have tried
+  - type: input
+    id: version
+    attributes:
+      label: Release and platform
+      description: From About, for example "1.0.0, macOS".

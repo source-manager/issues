@@ -1,0 +1,35 @@
+name: Improvement
+description: Something that works but could work better — speed, clarity, fewer steps, a rough edge.
+title: "[Improvement] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: current
+    attributes:
+      label: How it works today
+      description: The behaviour you want improved, and where you find it.
+    validations:
+      required: true
+  - type: textarea
+    id: better
+    attributes:
+      label: How it could be better
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of improvement
+      options:
+        - Performance or memory
+        - Fewer steps or clicks
+        - Clearer wording or layout
+        - Keyboard access
+        - Accessibility
+        - Other
+  - type: textarea
+    id: build
+    attributes:
+      label: Build details
+      description: About > Copy details. Required for performance reports; add repository size and rough commit count.
+      render: text

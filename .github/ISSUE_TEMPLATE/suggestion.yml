@@ -1,0 +1,21 @@
+name: Suggestion
+description: An idea that is not fully formed — for discussion before it becomes a feature.
+title: "[Suggestion] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it might be worth it
+      description: Who it helps and how often it would come up.
+  - type: textarea
+    id: unsure
+    attributes:
+      label: What you are unsure about
+      description: Open questions, trade-offs, or parts you have not thought through.
